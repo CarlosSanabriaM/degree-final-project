@@ -4,3 +4,6 @@
 [submodule "web_backend"]
 	path = web_backend
 	url = https://github.com/CarlosSanabriaM/web_backend.git
+[submodule "web-frontend"]
+	path = web-frontend
+	url = https://github.com/CarlosSanabriaM/web-frontend.git
