@@ -1,0 +1,36 @@
+# All the files and folder specified in this file won't be added to the docker build context
+# That means that those files won't be able to be used by the dockerfile commands COPY and ADD
+
+## Ignore everything ##
+*
+## Except the following files/folders from topics_and_summary ##
+!topics_and_summary/datasets/20_newsgroups
+
+# Uncomment this 2 lines to include in the docker image all the word embeddings (3.9GB)
+#!topics_and_summary/embeddings/glove/glove.6B
+#!topics_and_summary/embeddings/word2vec/GoogleNews-vectors-negative300.bin.gz
+# Or uncomment this line to include only the Glove word embeddings of 100 dimensions (350MB)
+!topics_and_summary/embeddings/glove/glove.6B/glove.6B.100d.txt
+
+!topics_and_summary/mallet-2.0.8
+!topics_and_summary/setup.py
+!topics_and_summary/MANIFEST.in
+!topics_and_summary/README.md
+!topics_and_summary/topics_and_summary
+## Ignore the following files from topics_and_summary package ##
+topics_and_summary/topics_and_summary/docs
+topics_and_summary/topics_and_summary/notebooks
+topics_and_summary/topics_and_summary/saved-elements
+
+## Except the following files/folders from web_backend ##
+!web_backend/tests
+!web_backend/setup.py
+!web_backend/MANIFEST.in
+!web_backend/README.md
+!web_backend/production-conf.ini
+!web_backend/web_backend
+!web_backend/mallet-docker
+## Ignore the following files from web_backend package ##
+web_backend/web_backend/docs
+# Uncomment this line to exclude the previously generated wordcloud-images
+#web_backend/web_backend/static/wordcloud-images/*
