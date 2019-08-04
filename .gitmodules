@@ -1,3 +1,6 @@
 [submodule "topics_and_summary"]
 	path = topics_and_summary
 	url = https://github.com/CarlosSanabriaM/topics_and_summary.git
+[submodule "web_backend"]
+	path = web_backend
+	url = https://github.com/CarlosSanabriaM/web_backend.git
